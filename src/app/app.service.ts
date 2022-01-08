@@ -10,10 +10,12 @@ export class EngineService {
       'https://warp-regulator-bd7q33crqa-lz.a.run.app/api/start',
       { name: 'Juhan Juurikas', email: 'juhan@example.com' },
       {
-        withCredentials: true,
         headers: {
-          'accept': 'application/json',
+          accept: 'application/json',
           'Content-Type': 'application/json',
+          ' Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true',
+          "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT"
         },
       }
     );
